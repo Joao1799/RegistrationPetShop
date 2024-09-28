@@ -1,0 +1,83 @@
+<section class="main-container">
+	<header>
+		<nav>
+			<img src="images/petShop/onda.png" alt="">
+
+			<ul>
+				<li>Home</li>
+				<li>Registrar</li>
+				<li>Tabelas</li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="body-main">
+		<h1>Tabela de Clientes</h1>
+		<article>
+			<img src="images/petShop/Cat.svg" alt="" class="pet-img">
+			<div class="container">
+				
+			<p-table [value]="users" [scrollable]="true" [paginator]="true" [rows]="5" [rowsPerPageOptions]="[1,5, 10, 20]"
+			scrollHeight="470px" dataKey="id" >
+				<ng-template pTemplate="header">
+					<tr>
+						<th style="width: 5rem"></th>
+						<th>Nome</th>
+						<th>Email</th>
+						<th style="width: 15%">Atendido</th>
+						<th style="width: 15%">Id Cliente</th>
+					</tr>
+				</ng-template>
+				<ng-template pTemplate="body" let-users let-expanded="expanded">
+					<tr>
+						<td>
+							<p-button type="button" pButton  pRipple [pRowToggler]="users" [text]="true" [rounded]="true" [plain]="true" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'" />
+						</td>
+                        <td>{{ users.ownerName }}</td>
+                        <td>{{ users.email }}</td>
+						<td>{{ users.atendimentos.length > 0 && users.atendimentos[0].atendido === true ? 'Sim' : 'Não' }}</td>					
+                        <td>{{ users.id }}</td> 
+					</tr>
+				</ng-template>
+				<ng-template pTemplate="rowexpansion" let-users>
+					<tr>
+						<td colspan="5">
+							<p-table [value]="users.pets" dataKey="id">
+								<ng-template pTemplate="header">
+									<tr>
+										<th pSortableColumn="customer">Nome <p-sortIcon field="customer" /></th>
+										<th pSortableColumn="date">Raça <p-sortIcon field="date" /></th>
+										<th pSortableColumn="amount">Idade <p-sortIcon field="amount" /></th>
+										<th pSortableColumn="status">Dono <p-sortIcon field="status" /></th>
+										<th pSortableColumn="id" style="width: 15%">Id <p-sortIcon field="price" /></th>
+									</tr>
+								</ng-template>
+								<ng-template pTemplate="body" let-pet>
+									<tr>
+										<td>{{ pet.name }}</td>
+										<td>{{ pet.breed }}</td>
+										<td>{{ pet.age }}</td>
+										<td>{{ users.ownerName }}</td>
+										<td>
+											<!-- Exibe o tipo de atendimento se existir -->
+											{{ users.atendimentos.length > 0 ? users.atendimentos[0].tipo : 'Nenhum atendimento' }}
+										</td>
+									</tr>
+								</ng-template>
+								<ng-template pTemplate="emptymessage">
+									<tr>
+										<td colspan="4">Este usuario não possui Pet cadastrado!</td>
+									</tr>
+								</ng-template>
+							</p-table>
+						</td>
+					</tr>
+				</ng-template>
+			</p-table>
+			</div>
+			<img src="images/petShop/Dog.svg" alt="" class="pet-img">
+
+		</article>
+	</div>
+
+</section>
