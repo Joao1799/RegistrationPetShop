@@ -1,14 +1,7 @@
 <section class="main-container">
 	<header>
-		<nav>
 			<img src="images/petShop/onda.png" alt="">
-
-			<ul>
-				<li>Home</li>
-				<li>Registrar</li>
-				<li>Tabelas</li>
-			</ul>
-		</nav>
+			<p-menubar [model]="items" />
 	</header>
 
 	<div class="body-main">
@@ -49,7 +42,7 @@
 										<th pSortableColumn="date">Raça <p-sortIcon field="date" /></th>
 										<th pSortableColumn="amount">Idade <p-sortIcon field="amount" /></th>
 										<th pSortableColumn="status">Dono <p-sortIcon field="status" /></th>
-										<th pSortableColumn="id" style="width: 15%">Id <p-sortIcon field="price" /></th>
+										<th pSortableColumn="id" style="width: 15%">Atendimento <p-sortIcon field="price" /></th>
 									</tr>
 								</ng-template>
 								<ng-template pTemplate="body" let-pet>
