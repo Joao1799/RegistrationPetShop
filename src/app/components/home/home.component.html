@@ -1,16 +1,16 @@
 <section class="main-container">
-	<header>
+		<header>
 			<img src="images/petShop/onda.png" alt="">
 			<p-menubar [model]="items" />
-	</header>
-
-	<div class="body-main">
+		</header>
+		
+		<div class="body-main">
 		<h1>Tabela de Clientes</h1>
 		<article>
 			<img src="images/petShop/Cat.svg" alt="" class="pet-img">
 			<div class="container">
 				
-			<p-table [value]="users" [scrollable]="true" [paginator]="true" [rows]="5" [rowsPerPageOptions]="[1,5, 10, 20]"
+			<p-table [value]="users" [scrollable]="true" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[1,5, 10, 20]"
 			scrollHeight="470px" dataKey="id" >
 				<ng-template pTemplate="header">
 					<tr>
