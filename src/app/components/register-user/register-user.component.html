@@ -1,1 +1,37 @@
-<p>register-user works!</p>
+<section class="main-container">
+    <header>
+        <img src="images/petShop/onda.png" alt="">
+        <p-menubar [model]="items" />
+    </header>
+    
+    <div class="body-main">
+    <h1>Registrar Cliente</h1>
+    <article>
+        <img src="images/petShop/Cat.svg" alt="" class="pet-img">
+        <div class="container">
+            <form [formGroup]="formUserRegister">
+                <article>
+                    <label for="">Nome completo:</label>
+                    <input type="text" pInputText formCrontrolName="nome" />
+                </article>
+                
+                <article>
+                    <label for="">Email:</label>
+                    <input type="text" pInputText formControlName="email" />
+                </article>
+
+                <article>
+                    <label for="">Tipo de atendimento:</label>
+                    <p-multiSelect [options]="listAtendimentos" optionLabel="label" placeholder="Selecione um atendimento" />
+                </article>
+
+                <p-button label="Primary" [raised]="true" />
+            </form>
+        
+        </div>
+        <img src="images/petShop/Dog.svg" alt="" class="pet-img">
+
+    </article>
+</div>
+
+</section>

@@ -1,0 +1,248 @@
+.main-container {
+    background: #ffae34;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  header {
+    position: relative;
+    z-index: 4;
+    img {
+      width: 100%;
+      height: 150px;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+  
+  .body-main {
+    padding-top: 5%;
+    h1 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-size: 2.5rem;
+      padding-bottom: 10px;
+      color: white;
+    }
+    article {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+  
+      .container {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        form{
+            display: flex;
+            flex-direction: column;
+            background-color: #0075eb;
+            width: 50%;
+            height: 500px;
+            border-radius: 10px;
+            gap: 20px;
+            article{
+                justify-content: center;
+                align-items: left;
+                flex-direction: column;
+                height: 20%;
+                label{
+                    display: flex;
+                    justify-content: left;
+                    width: 90%;
+
+                }
+                input,p-multiSelect{
+                    width: 90%;
+                }
+                
+            }
+        }
+      }
+      .pet-img {
+        width: 250px;
+        height: auto;
+        margin: 10px auto;
+      }
+    }
+  }
+  
+  ::ng-deep {
+    .p-menubar {
+      padding: 0.5rem;
+      background: transparent;
+      border: 0px solid #e5e7eb;
+      border-radius: 0px;
+  
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .p-menubar .p-submenu-list {
+      padding: 0.5rem 0;
+      background: #ffffff;
+      border: 0 none;
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+      width: 12.5rem;
+      border-radius: 6px;
+    }
+    .p-menubar-root-list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 100px;
+    }
+    .p-submenu-icon {
+      font-size: 1.4rem;
+      color: #ffffff;
+    }
+  
+    .p-menuitem-text {
+      font-size: 1.6rem;
+      font-weight: normal;
+      color: rgb(255, 255, 255);
+    }
+    .p-menuitem-icon {
+      font-size: 1.8rem;
+      margin-right: 5px;
+      color: #ffffff;
+    }
+  
+    .p-menubar .p-menuitem-link {
+      align-items: baseline;
+    }
+  
+    .p-menubar .p-submenu-list {
+      padding: 0.4rem 0;
+      background: #0075eb;
+      border: 1px solid #ffffff;
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+      width: 100%;
+      border-radius: 6px;
+  
+      .p-menuitem-text {
+        font-size: 1.2rem;
+        font-weight: normal;
+        color: rgb(255, 255, 255);
+      }
+      .p-menuitem-icon {
+        font-size: 1.2rem;
+        margin-right: 5px;
+        color: #ffffff;
+      }
+    }
+  
+    //Hover sobre a opcao que tem dropdown
+    .p-menubar .p-menuitem.p-highlight > .p-menuitem-content {
+      color: #1d4ed8;
+      background: #ffae34;
+    }
+  
+    //Hover sobre a opcao que nao tem dropdown
+    .p-menubar
+      .p-menubar-root-list
+      > .p-menuitem:not(.p-highlight):not(.p-disabled)
+      > .p-menuitem-content:hover {
+      color: #ffffff;
+      background: #ffae34;
+    }
+  
+    //Hover texto que nao tem dropdown
+    .p-menubar
+      .p-menubar-root-list
+      > .p-menuitem:not(.p-highlight):not(.p-disabled)
+      > .p-menuitem-content:hover
+      .p-menuitem-link
+      .p-menuitem-text {
+      color: #ffffff;
+      background: #ffae34;
+    }
+  
+    //Hover icone que nao tem dropdown
+    .p-menubar
+      .p-menubar-root-list
+      > .p-menuitem:not(.p-highlight):not(.p-disabled)
+      > .p-menuitem-content:hover
+      .p-menuitem-link
+      .p-menuitem-icon,
+    .p-menubar
+      .p-menubar-root-list
+      > .p-menuitem:not(.p-highlight):not(.p-disabled)
+      > .p-menuitem-content:hover
+      .p-menuitem-link
+      .p-submenu-icon {
+      color: #ffffff;
+      background: #ffae34;
+    }
+  
+    //item selecionado no focus
+    .p-menubar .p-menuitem.p-highlight.p-focus > .p-menuitem-content {
+      background: #ffae34;
+    }
+  
+    //toda area selecionado, "onFocus"
+    .p-menubar
+      .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus
+      > .p-menuitem-content {
+      color: #f3f4f6;
+      background: transparent;
+    }
+  
+    //label principal selecionado, "onFocus"
+    .p-menubar
+      .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus
+      > .p-menuitem-content
+      .p-menuitem-link
+      .p-menuitem-text {
+      color: #f3f4f6;
+    }
+  
+    //icones principais selecionado, "onFocus"
+    .p-menubar
+      .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus
+      > .p-menuitem-content
+      .p-menuitem-link
+      .p-menuitem-icon,
+    .p-menubar
+      .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus
+      > .p-menuitem-content
+      .p-menuitem-link
+      .p-submenu-icon {
+      color: #f3f4f6;
+    }
+  
+    //Hover sobre o itens dropdown
+    .p-menubar
+      .p-menuitem:not(.p-highlight):not(.p-disabled)
+      > .p-menuitem-content:hover {
+      color: #ffae34;
+      background: #f3f4f6;
+    }
+  
+    //cor do texto do menu do dropdown
+    .p-menubar
+      .p-menuitem:not(.p-highlight):not(.p-disabled)
+      > .p-menuitem-content:hover
+      .p-menuitem-link
+      .p-menuitem-text {
+      color: #ffae34;
+    }
+  
+    //cor do icone do menu do dropdown
+    .p-menubar
+      .p-menuitem:not(.p-highlight):not(.p-disabled)
+      > .p-menuitem-content:hover
+      .p-menuitem-link
+      .p-menuitem-icon,
+    .p-menubar
+      .p-menuitem:not(.p-highlight):not(.p-disabled)
+      > .p-menuitem-content:hover
+      .p-menuitem-link
+      .p-submenu-icon {
+      color: #ffae34;
+    }
+  }
+  
