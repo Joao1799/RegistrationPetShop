@@ -1,15 +1,12 @@
 <section class="main-container">
-    <header>
-        <img src="images/petShop/onda.png" alt="">
-        <p-menubar [model]="items" />
-    </header>
+    <app-header> </app-header>
     
     <div class="body-main">
-    <h1>Registrar Cliente</h1>
-    <article>
+    <article class="body">
         <img src="images/petShop/Cat.svg" alt="" class="pet-img">
         <div class="container">
             <form [formGroup]="formUserRegister">
+                <h1>Registrar Cliente</h1>
                 <article>
                     <label for="">Nome completo:</label>
                     <input type="text" pInputText formCrontrolName="nome" />
@@ -22,10 +19,10 @@
 
                 <article>
                     <label for="">Tipo de atendimento:</label>
-                    <p-multiSelect [options]="listAtendimentos" optionLabel="label" placeholder="Selecione um atendimento" />
+                    <p-multiSelect class="select" [options]="listAtendimentos" optionLabel="label" placeholder="Selecione um atendimento" />
                 </article>
 
-                <p-button label="Primary" [raised]="true" />
+                <p-button class="btnFooter" label="Registrar" [raised]="true" />
             </form>
         
         </div>

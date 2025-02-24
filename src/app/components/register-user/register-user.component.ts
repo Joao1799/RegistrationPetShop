@@ -6,13 +6,14 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angul
 import { InputTextModule } from 'primeng/inputtext';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { ButtonModule } from 'primeng/button';
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
-  selector: 'app-register-user',
-  standalone: true,
-  imports: [ButtonModule,MenubarModule,CommonModule,ReactiveFormsModule,InputTextModule,MultiSelectModule],
-  templateUrl: './register-user.component.html',
-  styleUrl: './register-user.component.scss'
+    selector: 'app-register-user',
+    standalone: true,
+    templateUrl: './register-user.component.html',
+    styleUrl: './register-user.component.scss',
+    imports: [ButtonModule, MenubarModule, CommonModule, ReactiveFormsModule, InputTextModule, MultiSelectModule, HeaderComponent]
 })
 export class RegisterUserComponent {
   items:  MenuItem[] | undefined;
@@ -28,58 +29,9 @@ export class RegisterUserComponent {
   constructor(private fb: FormBuilder){};
 
   ngOnInit(){
-    this.menuBar();
     this.onSubmit();
   }
 
-  menuBar(){
-    this.items = [
-      {
-          label: 'Home',
-          icon: 'fa fa-user',
-          routerLink: '/home'
-      },
-      {
-          label: 'Atendimentos',
-          icon: 'pi pi-calendar',
-          items: [
-              {
-                  label: 'Consulta',
-                  icon: 'fa fa-notes-medical',
-              },
-              {
-                  label: 'Vacinação',
-                  icon: 'fa fa-syringe'
-              },
-              {
-                  label: 'Retorno',
-                  icon: 'fa fa-rotate-left'
-              },
-          ]
-      },
-      {
-        label: 'Registros',
-        icon: 'pi pi-align-justify',
-        items: [
-          {
-            label: 'Usuario',
-            icon: 'pi pi-user-plus',
-            routerLink: '/registrarUsuario',
-          },
-          {
-            label: 'Pet',
-            icon: 'fa fa-dog',
-            routerLink: '/registrarPet',
-          },
-          {
-            label: 'Serviço',
-            icon: 'fa fa-calendar-days',
-            routerLink: '/registrarServico',
-          },
-        ]
-      }
-  ]
-  }
 
   onSubmit(){
     this.formUserRegister = this.fb.group({

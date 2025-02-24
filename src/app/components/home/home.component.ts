@@ -7,14 +7,15 @@ import { RippleModule } from 'primeng/ripple';
 import { MenuItem } from 'primeng/api';
 import { MenubarModule } from 'primeng/menubar';
 import { Router } from '@angular/router';
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [TableModule,CommonModule,RippleModule,ButtonModule,MenubarModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
-  providers: [homeServices],
+    selector: 'app-home',
+    standalone: true,
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
+    providers: [homeServices],
+    imports: [TableModule, CommonModule, RippleModule, ButtonModule, MenubarModule, HeaderComponent]
 })
 export class HomeComponent {
   users: any;
@@ -25,7 +26,6 @@ export class HomeComponent {
 
   ngOnInit() {
     this.getUsers(); 
-    this.menuBar();
 
     this.users = [
       {
@@ -123,54 +123,7 @@ export class HomeComponent {
     })
   }
 
-  menuBar(){
-    this.items = [
-      {
-          label: 'Home',
-          icon: 'fa fa-user',
-          routerLink: '/home'
-      },
-      {
-          label: 'Atendimentos',
-          icon: 'pi pi-calendar',
-          items: [
-              {
-                  label: 'Consulta',
-                  icon: 'fa fa-notes-medical',
-              },
-              {
-                  label: 'Vacinação',
-                  icon: 'fa fa-syringe'
-              },
-              {
-                  label: 'Retorno',
-                  icon: 'fa fa-rotate-left'
-              },
-          ]
-      },
-      {
-        label: 'Registros',
-        icon: 'pi pi-align-justify',
-        items: [
-          {
-            label: 'Usuario',
-            icon: 'pi pi-user-plus',
-            routerLink: '/registrarUsuario',
-          },
-          {
-            label: 'Pet',
-            icon: 'fa fa-dog',
-            routerLink: '/registrarPet',
-          },
-          {
-            label: 'Serviço',
-            icon: 'fa fa-calendar-days',
-            routerLink: '/registrarServico',
-          },
-        ]
-      }
-  ]
-  }
+
 
 }
 
