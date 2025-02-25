@@ -6,9 +6,9 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } 
 import { InputTextModule } from 'primeng/inputtext';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { ButtonModule } from 'primeng/button';
-import { HeaderComponent } from "../header/header.component";
-import { ServiceMainService } from '../../service-main.service';
 import { ToastModule } from 'primeng/toast';
+import { HeaderComponent } from '../../header/header.component';
+import { ServiceMainService } from '../../../service-main.service';
 
 @Component({
     selector: 'app-register-user',

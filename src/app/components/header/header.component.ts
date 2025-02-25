@@ -21,7 +21,7 @@ export class HeaderComponent {
   menuBar(){
     this.items = [
       {
-          label: 'Home',
+          label: 'Clientes',
           icon: 'fa fa-user',
           routerLink: '/home'
       },
