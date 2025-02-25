@@ -5,13 +5,16 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class homeServices {
-  private apiUrl = 'http://localhost:3000/api/';
+export class ServiceMainService {
+    private apiUrl = 'http://localhost:3000/api';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
+
   getUsers() {
     return this.http.get<any[]>(`${this.apiUrl}/users`);
   }
 
-
+  postRegisterUser(body: any){
+    return this.http.post<any[]>(`${this.apiUrl}/users`,body)
+  }
 }

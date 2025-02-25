@@ -9,20 +9,15 @@
                 <h1>Registrar Cliente</h1>
                 <article>
                     <label for="">Nome completo:</label>
-                    <input type="text" pInputText formCrontrolName="nome" />
+                    <input type="text" pInputText formControlName="ownerName" />
                 </article>
                 
                 <article>
                     <label for="">Email:</label>
                     <input type="text" pInputText formControlName="email" />
                 </article>
-
-                <article>
-                    <label for="">Tipo de atendimento:</label>
-                    <p-multiSelect class="select" [options]="listAtendimentos" optionLabel="label" placeholder="Selecione um atendimento" />
-                </article>
-
-                <p-button class="btnFooter" label="Registrar" [raised]="true" />
+                
+                <p-button type="button" class="btnFooter" label="Registrar" [raised]="true" (click)="registerUser()" />
             </form>
         
         </div>
@@ -32,3 +27,5 @@
 </div>
 
 </section>
+
+<p-toast />
