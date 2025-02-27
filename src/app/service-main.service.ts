@@ -13,8 +13,11 @@ export class ServiceMainService {
   getUsers() {
     return this.http.get<any[]>(`${this.apiUrl}/users`);
   }
+  postRegisterUser(infoUser: any){
+    return this.http.post<any[]>(`${this.apiUrl}/users`,infoUser)
+  }
 
-  postRegisterUser(body: any){
-    return this.http.post<any[]>(`${this.apiUrl}/users`,body)
+  postRegisterPet(infoPet: any,userID: any,){
+    return this.http.post<any[]>(`${this.apiUrl}/pets/${userID}`,infoPet)
   }
 }

@@ -1,1 +1,50 @@
-<p>register-pet works!</p>
+<section class="main-container">
+    <div class="body-main">
+    <article class="body">
+        <img src="images/petShop/Cat.svg" alt="" class="pet-img">
+        <div class="container">
+            <form [formGroup]="formPetRegister">
+                <h1>Registrar PET</h1>
+                <article>
+                    <label for="">Nome do PET:</label>
+                    <input type="text" pInputText formControlName="dogname" />
+                </article>
+
+                <article>
+                    <label for="">Espécie:</label>
+                    <input type="text" pInputText formControlName="species" />
+                </article>
+
+                <article>
+                    <label for="">idade:</label>
+                    <input type="text" pInputText formControlName="age" />
+                </article>
+
+                <article>
+                    <label for="">Raça:</label>
+                    <input type="text" pInputText formControlName="breed" />
+                </article>
+
+                <article>
+                    <label for="">Nome do Dono:</label>
+                    <p-autoComplete 
+                    formControlName="owner" 
+                    [suggestions]="nomesFiltrados" 
+                    (completeMethod)="filtroAC($event)" 
+                    field="owner" 
+                    (onSelect)="onOwnerSelect($event)" 
+                    [autoHighlight]="true">
+                    </p-autoComplete>              
+                </article>                             
+                <p-button type="button" class="btnFooter" label="Registrar" [raised]="true" (click)="registerPet()" />
+            </form>
+        
+        </div>
+        <img src="images/petShop/Dog.svg" alt="" class="pet-img">
+
+    </article>
+</div>
+
+</section>
+
+<p-toast />

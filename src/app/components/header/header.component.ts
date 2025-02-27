@@ -21,12 +21,12 @@ export class HeaderComponent {
   menuBar(){
     this.items = [
       {
-          label: 'Clientes',
+          label:'Clientes',
           icon: 'fa fa-user',
           routerLink: '/home'
       },
       {
-          label: 'Atendimentos',
+          label:'Atendimentos',
           icon: 'pi pi-calendar',
           items: [
               {
