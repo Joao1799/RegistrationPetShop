@@ -17,7 +17,7 @@ export class ServiceMainService {
     return this.http.post<any[]>(`${this.apiUrl}/users`,infoUser)
   }
 
-  postRegisterPet(infoPet: any,userID: any,){
-    return this.http.post<any[]>(`${this.apiUrl}/pets/${userID}`,infoPet)
+  postRegisterPet(infoPet: any, userID: any) {
+    return this.http.post<any[]>(`${this.apiUrl}/pets`, { ...infoPet, userId: userID });
   }
 }

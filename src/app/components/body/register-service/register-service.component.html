@@ -1,1 +1,38 @@
-<p>register-service works!</p>
+<section class="main-container">
+    <div class="body-main">
+    <article class="body">
+        <img src="images/petShop/Cat.svg" alt="" class="pet-img">
+        <div class="container">
+            <form [formGroup]="formUserService">
+                <h1>Registrar Atendimento</h1>
+                <article>
+                    <label for="">Motivo do Atendimento:</label>
+                    <input type="text" pInputText formControlName="tipo" />
+                </article>
+                <article>
+                    <label for="">Data e Hora do Atendimento:</label>
+                    <input type="text" pInputText formControlName="dataHora" />
+                </article>
+                <article>
+                    <label for="">Responsavel/Pet:</label>
+                    <p-autoComplete 
+                    [suggestions]="filteredUsers" 
+                    field="ownerName" 
+                    (onSelect)="onOwnerSelect($event)" 
+                    [autoHighlight]="true"
+                    (completeMethod)="filterUsers($event)">
+                    </p-autoComplete>
+                </article>
+
+                <p-button type="button" class="btnFooter" label="Registrar" [raised]="true" (click)="registerService()" />
+            </form>
+        
+        </div>
+        <img src="images/petShop/Dog.svg" alt="" class="pet-img">
+
+    </article>
+</div>
+
+</section>
+
+<p-toast />
