@@ -7,7 +7,7 @@
                 <h1>Registrar PET</h1>
                 <article>
                     <label for="">Nome do PET:</label>
-                    <input type="text" pInputText formControlName="dogname" />
+                    <input type="text" pInputText formControlName="name" />
                 </article>
 
                 <article>
@@ -28,7 +28,6 @@
                 <article>
                     <label for="">Nome do Dono:</label>
                     <p-autoComplete 
-                    formControlName="owner" 
                     [suggestions]="nomesFiltrados" 
                     (completeMethod)="filtroAC($event)" 
                     field="owner" 

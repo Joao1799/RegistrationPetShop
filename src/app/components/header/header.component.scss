@@ -2,7 +2,9 @@
   width: 100%;
   min-height: 10%;
   background-color: #0075eb;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
+
 
 ::ng-deep{
   .p-menubar {
@@ -11,13 +13,13 @@
     border-radius: 0px;
     width: 100%;
     height: 100%;
-    padding: 0;
     flex-wrap: wrap;
   }
 
   p-menubarsub{
     display: flex;
     height: 100%;
+    overflow: auto;
   }
 
   .p-menubar-root-list {
@@ -26,6 +28,7 @@
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    overflow: auto;
 }
 
   .p-menubar .p-submenu-list {

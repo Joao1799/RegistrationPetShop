@@ -10,7 +10,7 @@ import { MenubarModule } from 'primeng/menubar';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  items!: ({ label: string; icon: string; routerLink: string; items?: undefined; } | { label: string; icon: string; items: { label: string; icon: string; }[]; routerLink?: undefined; } | { label: string; icon: string; items: { label: string; icon: string; routerLink: string; }[]; routerLink?: undefined; })[];
+  items!: any;
 
     constructor(private router: Router){};
   
@@ -27,43 +27,25 @@ export class HeaderComponent {
       },
       {
           label:'Atendimentos',
-          icon: 'pi pi-calendar',
-          items: [
-              {
-                  label: 'Consulta',
-                  icon: 'fa fa-notes-medical',
-              },
-              {
-                  label: 'Vacinação',
-                  icon: 'fa fa-syringe'
-              },
-              {
-                  label: 'Retorno',
-                  icon: 'fa fa-rotate-left'
-              },
-          ]
+          icon: 'pi pi-calendar'
       },
       {
-        label: 'Registros',
-        icon: 'pi pi-align-justify',
-        items: [
-          {
-            label: 'Usuario',
-            icon: 'pi pi-user-plus',
-            routerLink: '/registrarUsuario',
-          },
-          {
-            label: 'Pet',
-            icon: 'fa fa-dog',
-            routerLink: '/registrarPet',
-          },
-          {
-            label: 'Serviço',
-            icon: 'fa fa-calendar-days',
-            routerLink: '/registrarServico',
-          },
-        ]
-      }
+        label: 'Usuario',
+        icon: 'pi pi-user-plus',
+        routerLink: '/registrarUsuario',
+      },
+      {
+        label: 'Pet',
+        icon: 'fa fa-dog',
+        routerLink: '/registrarPet',
+      },
+      {
+        label: 'Serviço',
+        icon: 'fa fa-calendar-days',
+        routerLink: '/registrarServico',
+      },
+        
+      
   ]
   }
 }

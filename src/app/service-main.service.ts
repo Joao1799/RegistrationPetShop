@@ -11,13 +11,17 @@ export class ServiceMainService {
   constructor(private http: HttpClient) { }
 
   getUsers() {
-    return this.http.get<any[]>(`${this.apiUrl}/users`);
+    return this.http.get<any[]>(`${this.apiUrl}/allUsers`);
   }
+  deleteUSer(id:any){
+    return this.http.delete<any[]>(`${this.apiUrl}/users/${id}`);
+  }
+
   postRegisterUser(infoUser: any){
     return this.http.post<any[]>(`${this.apiUrl}/users`,infoUser)
   }
 
-  postRegisterPet(infoPet: any, userID: any) {
-    return this.http.post<any[]>(`${this.apiUrl}/pets`, { ...infoPet, userId: userID });
+  postRegisterPet(infoPet: any) {
+    return this.http.post<any[]>(`${this.apiUrl}/createPets`,infoPet);
   }
 }

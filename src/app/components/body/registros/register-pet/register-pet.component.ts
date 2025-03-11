@@ -8,8 +8,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
-import { HeaderComponent } from '../../header/header.component';
-import { ServiceMainService } from '../../../service-main.service';
+import { HeaderComponent } from '../../../header/header.component';
+import { ServiceMainService } from '../../../../service-main.service';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { AutoComplete } from 'primeng/autocomplete';
 
@@ -38,6 +38,8 @@ export class RegisterPetComponent {
 
   getUsers(){
     this.serviceMain.getUsers().subscribe((users =>{
+      console.log(users);
+      
       this.usuarios = users;
       this.nomeUsuarios = this.usuarios.map(usuario =>{
         return usuario.ownerName;
@@ -60,19 +62,17 @@ export class RegisterPetComponent {
     this.idUsuario = event.value.ownerId;  
     
     this.formPetRegister.patchValue({ 
-      owner: event.value.owner,  
-      userId: this.idUsuario  
+      ownerId: this.idUsuario  
     });
   }
 
   formsPet(){
     this.formPetRegister = this.fb.group({
-      dogname: ['', Validators.required],
+      name: ['', Validators.required],
       breed: ['', Validators.required],
       age: ['', Validators.required],
       species: ['', Validators.required],
-      owner: ['', Validators.required],
-      userId: ['', Validators.required],
+      ownerId: ['', Validators.required],
     });
   }
 
@@ -81,8 +81,8 @@ export class RegisterPetComponent {
       console.log(this.idUsuario);
       console.log(this.formPetRegister.value);
       
-      this.serviceMain.postRegisterPet(this.formPetRegister.value, this.idUsuario).subscribe(req=>{
-        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Cliente cadastrado' });
+      this.serviceMain.postRegisterPet(this.formPetRegister.value).subscribe(req=>{
+        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'PET cadastrado' });
       })
       
     }

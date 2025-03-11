@@ -51,7 +51,7 @@
     app-body{
         width: 90%;
         z-index: 0;
-        background: #0076eb2b;
+        background: #F2F3F8;
     }
 }
 
@@ -71,8 +71,8 @@
     }
   
     .p-datatable-wrapper {
-      box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.31);
-      border-radius: 10px;
+      border: 1px solid rgba(119, 119, 119, 0.492);
+      border-radius: 6px;
     }
     .p-paginator {
       background: transparent;

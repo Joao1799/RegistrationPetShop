@@ -7,8 +7,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
-import { HeaderComponent } from '../../header/header.component';
-import { ServiceMainService } from '../../../service-main.service';
+import { HeaderComponent } from '../../../header/header.component';
+import { ServiceMainService } from '../../../../service-main.service';
 
 @Component({
     selector: 'app-register-user',
@@ -31,9 +31,15 @@ export class RegisterUserComponent {
   constructor(private fb: FormBuilder, public serviceMainService: ServiceMainService,private messageService: MessageService){};
 
   ngOnInit() {
+    this.form();
+  }
+
+  form(){
     this.formUserRegister = this.fb.group({
       ownerName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]]
+      email: ['', [Validators.required, Validators.email]],
+      telefone: ['', [Validators.required]],
+      CPF: ['', [Validators.required]]
     });
   }
 
@@ -43,10 +49,10 @@ export class RegisterUserComponent {
 
   registerUser() {
     console.log(this.formUserRegister.value);
-    
     if (this.formUserRegister.valid) {
       this.serviceMainService.postRegisterUser(this.formUserRegister.value).subscribe((req) => {
       this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Cliente cadastrado' });
+      this.formUserRegister.reset();
       });
     } else {
       console.log('Formulário inválido',this.formUserRegister.value);

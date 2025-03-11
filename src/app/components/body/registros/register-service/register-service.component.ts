@@ -7,8 +7,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
-import { HeaderComponent } from '../../header/header.component';
-import { ServiceMainService } from '../../../service-main.service';
+import { HeaderComponent } from '../../../header/header.component';
+import { ServiceMainService } from '../../../../service-main.service';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 
 interface Pet {

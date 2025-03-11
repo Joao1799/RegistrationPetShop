@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './components/body/home/home.component';
-import { RegisterPetComponent } from './components/body/register-pet/register-pet.component';
-import { RegisterServiceComponent } from './components/body/register-service/register-service.component';
-import { RegisterUserComponent } from './components/body/register-user/register-user.component';
+import { RegisterPetComponent } from './components/body/registros/register-pet/register-pet.component';
+import { RegisterServiceComponent } from './components/body/registros/register-service/register-service.component';
+import { RegisterUserComponent } from './components/body/registros/register-user/register-user.component';
 
 
 export const routes: Routes = [
