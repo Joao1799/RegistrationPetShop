@@ -1,4 +1,6 @@
-<div class="container">
+<app-login *ngIf="!usuarioLogado" (liberarAcesso)="onLoginSuccess($event)"></app-login>
+
+<div class="container" *ngIf="usuarioLogado">
     <div class="banner">
         <div class="logo">
             <img src="/images/petShop/My_Pet_Care noBG.png" alt="">

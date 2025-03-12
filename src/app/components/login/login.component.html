@@ -1,0 +1,21 @@
+
+<div class="container">
+    <div class="main">
+        <div class="body">
+            <form [formGroup]="formUserRegister">
+                <h1>Login Funcionario:</h1>  
+                <article>
+                    <label for="">Email:</label>
+                    <input type="text" pInputText formControlName="email" />
+                </article>
+        
+                <article>
+                    <label for="">senha:</label>
+                    <input type="text" pInputText formControlName="senha" />
+                </article>
+        
+                <p-button type="button" class="btnFooter" label="Registrar" [raised]="true" (click)="registerUserFunc()" />
+            </form>
+        </div>
+    </div>
+</div>

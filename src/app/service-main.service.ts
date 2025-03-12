@@ -24,4 +24,8 @@ export class ServiceMainService {
   postRegisterPet(infoPet: any) {
     return this.http.post<any[]>(`${this.apiUrl}/createPets`,infoPet);
   }
+
+  loginUserFunc(infoUserFunc: any){
+    return this.http.post<any[]>(`${this.apiUrl}/login/usersFunc`,infoUserFunc);
+  }
 }
