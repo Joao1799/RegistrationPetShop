@@ -2,20 +2,39 @@
 <div class="container">
     <div class="main">
         <div class="body">
-            <form [formGroup]="formUserRegister">
-                <h1>Login Funcionario:</h1>  
-                <article>
-                    <label for="">Email:</label>
-                    <input type="text" pInputText formControlName="email" />
-                </article>
+            <div class="infos">
+
+            </div>
+
+            <div class="right">
+                <div class="header">
+                    <div class="img">
+                        <img src="/images/petShop/logoLogin.png" alt="">
+                    </div>
+                    <h1>Olá</h1>  
+                    <h1>Seja Bem Vindo de volta.</h1>  
+                </div>
+                <div class="forms">
+                    <form [formGroup]="formUserRegister">
+                        <h2>Faça o seu login</h2>
+                        <article>
+                            <p-floatLabel variant="in">
+                                <input id="over_label" pInputText type="text" formControlName="email"  />
+                                <label for="over_label">Email</label>
+                            </p-floatLabel>                
+                        </article>
         
-                <article>
-                    <label for="">senha:</label>
-                    <input type="text" pInputText formControlName="senha" />
-                </article>
-        
-                <p-button type="button" class="btnFooter" label="Registrar" [raised]="true" (click)="registerUserFunc()" />
-            </form>
+                        <article>
+                            <p-floatLabel>
+                                <p-password  id="senha" formControlName="senha"/>
+                                <label for="senha">senha</label>
+                            </p-floatLabel> 
+                        </article>
+                
+                        <p-button type="button" class="btnFooter" label="Registrar" [raised]="true" (click)="registerUserFunc()" />
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>

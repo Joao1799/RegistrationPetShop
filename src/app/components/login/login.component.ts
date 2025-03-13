@@ -6,11 +6,13 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ToastModule } from 'primeng/toast';
 import { ServiceMainService } from '../../service-main.service';
 import { MessageService } from 'primeng/api';
+import { PasswordModule } from 'primeng/password';
+import { FloatLabelModule } from 'primeng/floatlabel';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ButtonModule,ToastModule, CommonModule, ReactiveFormsModule, InputTextModule],
+  imports: [ButtonModule,ToastModule,PasswordModule,FloatLabelModule, CommonModule, ReactiveFormsModule, InputTextModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
