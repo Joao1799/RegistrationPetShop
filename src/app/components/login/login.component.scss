@@ -30,6 +30,20 @@
                 height: 100%;
                 background-color: #ffae34;
                 border-radius: 10px 0px 0px 10px;
+                
+                .imgLeft{
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px;
+
+                    img{
+                        border-radius: 10px;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+
+                }
             }
 
             .right{
@@ -59,9 +73,9 @@
                         }
                     }
                     h1{
-                        width: 80%;
-                        font-size: 32px;
+                        font-size: clamp(1.4rem, 4vw, 2rem);
                         font-weight: 400;
+                        text-align: center;
                     }
                 }
 
@@ -75,7 +89,20 @@
                     h2{
                         display: flex;
                         justify-content: center;
+                        text-align: center;
+
                         font-weight: 400;
+                    }
+
+                    article{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+
+                        label{
+                            font-size: 1rem;
+                            
+                        }
                     }
 
                     form{
@@ -83,30 +110,34 @@
                         display: flex;
                         flex-direction: column;
                         gap: 24px;
+
+                        .btnFooter{
+                            width: 100%;
+                            display: flex;
+                            justify-content: end;
+                        }
                     }
                     
                 }
 
                 .p-inputtext{
-                    padding: 0.75rem 0rem;
+                    // padding: 0.75rem 0rem;
                     width: 100%;
+                    
                 }
-
                 #senha{
                     display: flex;
                     width: 100%;
-                    .p-inputtext{
-                        padding: 0.75rem 0rem;
-                        width: 100%;
+                    ::ng-deep{
+                        .p-password.p-component.p-inputwrapper{
+                            width: 100% !important; 
+                            .p-password-input{
+                                width: 100%;
+                            }
+                        }    
                     }
+
                 }
-
-                .p-inputtext .p-component .p-element .p-password-input{
-                    display: flex;
-                    width: 100%;
-                }
-
-
             }
         
 

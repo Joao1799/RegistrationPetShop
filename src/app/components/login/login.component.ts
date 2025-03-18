@@ -42,7 +42,7 @@ export class LoginComponent {
         });
       } else {
         console.log('Formulário inválido',this.formUserRegister.value);
-        this.messageService.add({ severity: 'error', summary: 'Error', detail: 'falha de acesso' });
+        this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Email ou senha inválidos' });
       }
     }
 

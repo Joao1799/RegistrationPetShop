@@ -3,13 +3,15 @@
     <div class="main">
         <div class="body">
             <div class="infos">
-
+                <div class="imgLeft">
+                    <img src="/images/dogAndCat.jpg" alt="">
+                </div>
             </div>
 
             <div class="right">
                 <div class="header">
                     <div class="img">
-                        <img src="/images/petShop/logoLogin.png" alt="">
+                        <img src="/images/logoLogin.png" alt="">
                     </div>
                     <h1>Olá</h1>  
                     <h1>Seja Bem Vindo de volta.</h1>  
@@ -18,23 +20,21 @@
                     <form [formGroup]="formUserRegister">
                         <h2>Faça o seu login</h2>
                         <article>
-                            <p-floatLabel variant="in">
-                                <input id="over_label" pInputText type="text" formControlName="email"  />
-                                <label for="over_label">Email</label>
-                            </p-floatLabel>                
+                            <label >Email:</label>             
+                            <input  placeholder="Informe seu email" pInputText type="text" formControlName="email"  />
                         </article>
         
                         <article>
-                            <p-floatLabel>
-                                <p-password  id="senha" formControlName="senha"/>
-                                <label for="senha">senha</label>
-                            </p-floatLabel> 
+                            <label for="senha">Senha:</label>
+                            <p-password  id="senha" placeholder="Informe sua senha" [feedback]="false" formControlName="senha"/>
                         </article>
                 
-                        <p-button type="button" class="btnFooter" label="Registrar" [raised]="true" (click)="registerUserFunc()" />
+                        <p-button type="button" class="btnFooter" label="Login" [raised]="true" (click)="registerUserFunc()" />
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<p-toast position="top-right" [baseZIndex]="9999"/>
