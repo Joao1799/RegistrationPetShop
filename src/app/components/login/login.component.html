@@ -13,11 +13,10 @@
                     <div class="img">
                         <img src="/images/logoLogin.png" alt="">
                     </div>
-                    <h1>Olá</h1>  
                     <h1>Seja Bem Vindo de volta.</h1>  
                 </div>
                 <div class="forms">
-                    <form [formGroup]="formUserRegister">
+                    <form [formGroup]="formUserlogin">
                         <h2>Faça o seu login</h2>
                         <article>
                             <label >Email:</label>             
@@ -26,10 +25,10 @@
         
                         <article>
                             <label for="senha">Senha:</label>
-                            <p-password  id="senha" placeholder="Informe sua senha" [feedback]="false" formControlName="senha"/>
+                            <p-password  id="senha" placeholder="Sua senha" [feedback]="false" formControlName="senha"/>
                         </article>
                 
-                        <p-button type="button" class="btnFooter" label="Login" [raised]="true" (click)="registerUserFunc()" />
+                        <p-button type="button" class="btnFooter" label="Login" [raised]="true" (click)="loginUserFunc()" />
                     </form>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-<app-login *ngIf="usuarioLogado" (liberarAcesso)="onLoginSuccess($event)"></app-login>
+<!-- <app-login *ngIf="usuarioLogado" (liberarAcesso)="onLoginSuccess($event)"></app-login>
 
 <div class="container" *ngIf="!usuarioLogado">
     <div class="banner">
@@ -14,4 +14,7 @@
         <app-header></app-header>
         <app-body></app-body>
     </div>
-</div>
+</div> -->
+
+<router-outlet></router-outlet>
+

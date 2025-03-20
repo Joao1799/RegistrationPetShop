@@ -26,6 +26,6 @@ export class ServiceMainService {
   }
 
   loginUserFunc(infoUserFunc: any){
-    return this.http.post<any[]>(`${this.apiUrl}/login/usersFunc`,infoUserFunc);
+    return this.http.post<any>(`${this.apiUrl}/login/usersFunc`,infoUserFunc);
   }
 }

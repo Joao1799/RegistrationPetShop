@@ -8,6 +8,7 @@ import { ServiceMainService } from '../../service-main.service';
 import { MessageService } from 'primeng/api';
 import { PasswordModule } from 'primeng/password';
 import { FloatLabelModule } from 'primeng/floatlabel';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,31 +18,33 @@ import { FloatLabelModule } from 'primeng/floatlabel';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-    formUserRegister!: FormGroup;
+  formUserlogin!: FormGroup;
     
     @Output() liberarAcesso: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-    constructor(private fb: FormBuilder, public serviceMainService: ServiceMainService,private messageService: MessageService){};
+    constructor( private router: Router, private fb: FormBuilder, public serviceMainService: ServiceMainService,private messageService: MessageService){};
   
     ngOnInit() {
       this.form();
     }
   
     form(){
-      this.formUserRegister = this.fb.group({
+      this.formUserlogin = this.fb.group({
         email: ['', [Validators.required, Validators.email]],
         senha: ['', [Validators.required]],
       });
     }
   
-    registerUserFunc() {
-      if (this.formUserRegister.valid) {
-        this.serviceMainService.loginUserFunc(this.formUserRegister.value).subscribe((req) => {
+    loginUserFunc() {
+      if (this.formUserlogin.valid) {
+        this.serviceMainService.loginUserFunc(this.formUserlogin.value).subscribe((res) => {
         this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Login realizado com Sucesso' });
+        console.log(res);
         this.liberarAcesso.emit(true);
+        this.router.navigate(['home']);
         });
       } else {
-        console.log('Formulário inválido',this.formUserRegister.value);
+        console.log('Formulário inválido',this.formUserlogin.value);
         this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Email ou senha inválidos' });
       }
     }

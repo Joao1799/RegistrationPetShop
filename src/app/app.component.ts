@@ -12,7 +12,7 @@ import { LoginComponent } from "./components/login/login.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [CommonModule, BodyComponent, HeaderComponent, LoginComponent]
+    imports: [CommonModule, BodyComponent, HeaderComponent, LoginComponent,RouterOutlet]
 })
 export class AppComponent {
   title = 'PetshopRegistration';

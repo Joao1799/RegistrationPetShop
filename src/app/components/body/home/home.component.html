@@ -2,9 +2,18 @@
 	
 	<div class="body-main">
 		<div class="contadores">
-			<article class="boxCont" id="cliente"></article>
-			<article class="boxCont" id="pets"></article>
-			<article class="boxCont" id="atendimentos"></article>
+			<article class="boxCont" id="cliente">
+				<h1 class="type">Clientes:</h1>
+				<h1 class="number">150</h1>
+			</article>
+			<article class="boxCont" id="pets">
+				<h1 class="type">PETS:</h1>
+				<h1 class="number">175</h1>
+			</article>
+			<article class="boxCont" id="atendimentos">
+				<h1 class="type">Atendimentos:</h1>
+				<h1 class="number">250</h1>
+			</article>
 		</div>
 		<div class="container">
 			<div class="header">
@@ -16,7 +25,7 @@
 					<input pInputText type="text" [(ngModel)]="campoPesquisa" (input)="filtrarTabela()" placeholder="Pesquise um cliente" />
 				</div>
 			</div>
-			<p-table [value]="listaFiltrada" scrollHeight="70vh" [scrollable]="true" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[1,5, 10, 20]"
+			<p-table [value]="listaFiltrada" scrollHeight="65vh" [scrollable]="true" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[1,5, 10, 20]"
 			dataKey="id" >
 				<ng-template pTemplate="header">
 					<tr>
@@ -52,11 +61,11 @@
 							<p-table [value]="users.pets" dataKey="id">
 								<ng-template pTemplate="header">
 									<tr>
-										<th pSortableColumn="customer">Nome></th>
-										<th pSortableColumn="date">Raça></th>
-										<th pSortableColumn="amount">Idade></th>
-										<th pSortableColumn="status">Dono></th>
-										<th pSortableColumn="id">Atendimento></th>
+										<th pSortableColumn="customer">Nome</th>
+										<th pSortableColumn="date">Raça</th>
+										<th pSortableColumn="amount">Idade</th>
+										<th pSortableColumn="status">Dono</th>
+										<th pSortableColumn="id">Atendimento</th>
 									</tr>
 								</ng-template>
 								<ng-template pTemplate="body" let-pet>
