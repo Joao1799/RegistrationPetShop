@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenubarModule } from 'primeng/menubar';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ import { MenubarModule } from 'primeng/menubar';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  items!: any;
+  items: MenuItem[] = [];
 
     constructor(private router: Router){};
   
@@ -21,8 +22,8 @@ export class HeaderComponent {
   menuBar(){
     this.items = [
       {
-          label:'Tabela',
-          icon: 'fa fa-user',
+          label:'Dashboard',
+          icon: 'pi pi-home',
           routerLink: '/home'
       },
       {

@@ -4,13 +4,21 @@ import { RegisterPetComponent } from './components/body/registros/register-pet/r
 import { RegisterServiceComponent } from './components/body/registros/register-service/register-service.component';
 import { RegisterUserComponent } from './components/body/registros/register-user/register-user.component';
 import { LoginComponent } from './components/login/login.component';
+import { BodyComponent } from './components/body/body.component';
 
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' }, 
-  { path: 'login', component: LoginComponent },  // Rota para o loginComponent
-  { path: 'home', component: HomeComponent },  // Rota para o HomeComponent
-  { path: 'registrarUsuario', component: RegisterUserComponent }, // Rota para RegistrarUser
-  { path: 'registrarPet', component: RegisterPetComponent },       // Rota para RegistrarPet
-  { path: 'registrarServico', component: RegisterServiceComponent }, // Rota para RegistrarService
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+
+ // rotas estão aninhadas dentro do BodyComponent.
+  { 
+    path: '',component: BodyComponent, 
+    children: [
+      { path: 'home', component: HomeComponent },
+      { path: 'registrarUsuario', component: RegisterUserComponent },
+      { path: 'registrarPet', component: RegisterPetComponent },
+      { path: 'registrarServico', component: RegisterServiceComponent },
+    ]
+  }
 ];

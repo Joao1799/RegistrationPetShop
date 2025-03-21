@@ -46,6 +46,8 @@ export class LoginComponent {
       } else {
         console.log('Formulário inválido',this.formUserlogin.value);
         this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Email ou senha inválidos' });
+        this.router.navigate(['home']);
+
       }
     }
 
