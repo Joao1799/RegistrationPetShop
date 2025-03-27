@@ -1,27 +1,55 @@
-# PetshopRegistration
+🐾 Petshop - Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+📌 Descrição
 
-## Development server
+Este projeto é o frontend do sistema de petshop, desenvolvido com Angular 18 e PrimeNG 17. Ele permite que clientes e funcionários realizem o cadastro, agendem atendimentos e gerenciem informações sobre os pets/usuario/atendimentos de maneira intuitiva e eficiente.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+🚀 Tecnologias Utilizadas
 
-## Code scaffolding
+🌐 Angular 18 - Framework para construção do frontend.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+🎨 PrimeNG 17 - Biblioteca de componentes UI para Angular.
 
-## Build
+🔄 RxJS - Gerenciamento de estados assíncronos.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+🎭 FortAwesome - Biblioteca de ícones FontAwesome para Angular.
 
-## Running unit tests
+📥 Instalação
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Clone este repositório:
 
-## Running end-to-end tests
+git clone https://github.com/seu-usuario/petshop-frontend.git
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Acesse a pasta do projeto:
 
-## Further help
+cd petshop-frontend
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Instale as dependências:
+
+npm install
+
+Inicie o servidor Angular:
+
+ng serve
+
+Acesse o sistema no navegador:
+
+http://localhost:4200
+
+
+✅ Funcionalidades
+
+📌 Cadastro e edição de pets
+
+👥 Gerenciamento de clientes e funcionários
+
+📅 Agendamento e visualização de atendimentos
+
+🔐 Autenticação de usuários
+
+🎨 Interface moderna e responsiva
+
+📜 Licença
+
+Este projeto está licenciado sob a MIT License.
+
