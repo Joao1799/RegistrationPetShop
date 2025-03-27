@@ -23,7 +23,7 @@ Este projeto é o frontend do sistema de petshop, desenvolvido com Angular 18 e 
 
 2. Acesse a pasta do projeto:
   ```bash
-  cd petshop-frontend
+  cd FrontEnd-Petshop
   ```
 
 3. Instale as dependências:
