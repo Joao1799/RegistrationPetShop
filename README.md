@@ -18,7 +18,7 @@ Este projeto é o frontend do sistema de petshop, desenvolvido com Angular 18 e 
 
 1. Clone este repositório:
   ```bash
-  git clone https://github.com/seu-usuario/petshop-frontend.git
+  git clone https://github.com/Joao1799/FrontEnd-Petshop.git
   ```
 
 2. Acesse a pasta do projeto:
