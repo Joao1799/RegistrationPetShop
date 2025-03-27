@@ -1,55 +1,59 @@
-🐾 Petshop - Frontend
+# 🐾 Petshop - Frontend
 
-📌 Descrição
+## 📌 Descrição
 
 Este projeto é o frontend do sistema de petshop, desenvolvido com Angular 18 e PrimeNG 17. Ele permite que clientes e funcionários realizem o cadastro, agendem atendimentos e gerenciem informações sobre os pets/usuario/atendimentos de maneira intuitiva e eficiente.
 
-🚀 Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
-🌐 Angular 18 - Framework para construção do frontend.
+- 🌐 **Angular 18** - Framework para construção do frontend.
 
-🎨 PrimeNG 17 - Biblioteca de componentes UI para Angular.
+- 🎨 **PrimeNG 17** - Biblioteca de componentes UI para Angular.
 
-🔄 RxJS - Gerenciamento de estados assíncronos.
+- 🔄 **RxJS** - Gerenciamento de estados assíncronos.
 
-🎭 FortAwesome - Biblioteca de ícones FontAwesome para Angular.
+- 🎭 **FontAwesome** - Biblioteca de ícones FontAwesome para Angular.
 
-📥 Instalação
+## 📥 Instalação
 
-Clone este repositório:
+1. Clone este repositório:
+  ```bash
+  git clone https://github.com/seu-usuario/petshop-frontend.git
+  ```
 
-git clone https://github.com/seu-usuario/petshop-frontend.git
+2. Acesse a pasta do projeto:
+  ```bash
+  cd petshop-frontend
+  ```
 
-Acesse a pasta do projeto:
+3. Instale as dependências:
+  ```bash
+  npm install
+  ```
 
-cd petshop-frontend
-
-Instale as dependências:
-
-npm install
-
-Inicie o servidor Angular:
-
+4. Inicie o servidor Angular:
+```bash
 ng serve
+```
 
-Acesse o sistema no navegador:
-
+5. Acesse o sistema no navegador:
+```bash
 http://localhost:4200
+```
 
+## ✅ Funcionalidades
 
-✅ Funcionalidades
+- 📌 **Cadastro e edição de pets**
 
-📌 Cadastro e edição de pets
+- 👥 **Gerenciamento de clientes e funcionários**
 
-👥 Gerenciamento de clientes e funcionários
+- 📅 **Agendamento e visualização de atendimentos**
 
-📅 Agendamento e visualização de atendimentos
+- 🔐 **Autenticação de usuários**
 
-🔐 Autenticação de usuários
+- 🎨 **Interface moderna e responsiva**
 
-🎨 Interface moderna e responsiva
-
-📜 Licença
+## 📜 Licença
 
 Este projeto está licenciado sob a MIT License.
 
